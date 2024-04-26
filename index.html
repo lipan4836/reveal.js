@@ -14,27 +14,130 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <div class="reveal">
+      <div class="slides">
+        <section>React.js</section>
+        <section>
+          <section>React Components</section>
+          <section>React Component is reusable piece of code that defines the
+            appearance and behavior of a part of the user interface.</section>
+          <section>
+            <p>fn-based component</p>
+            <pre><code>
+							const WelcomeMessage = () =&gt; {
+								return (
+									<div>
+										<h1>Hello, React!</h1>
+										<p>Welcome to the world of React.</p>
+									</div>
+								);
+							}
+						</code></pre>
+          </section>
+          <section>
+            class-based Components
+            <pre>
+							<code>
+								import React, { Component } from 'react';
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+								class SimpleClassComponent extends Component {
+									render() {
+										return (
+											<div>
+												<h2>This is a simple class component</h2>
+												<p>Looks simple!;)</p>
+											</div>
+										);
+									}
+								}
+							</code>
+						</pre>
+          </section>
+          <section>
+            <p class="fragment" data-fragment-index="1">Components in React are  the building blocks of the user interface.</p>
+						<button class="fragment" data-fragment-index="2">Some button</button>
+						<form  class="fragment" data-fragment-index="3" style="border: 2px solid #fff; border-radius: 10px;">
+							<input type="text">
+							<input type="password">
+							<button>Submit</button>
+						</form>
+          </section>
+        </section>
+        <section>
+          <section>Properties (props) and state</section>
+          <section>
+            <ul>Properties (props)
+							<li class="fragment" data-fragment-index="1">data that are passed to a component from the outside</li>
+							<li class="fragment" data-fragment-index="2">read-only</li>
+							<li class="fragment" data-fragment-index="3">used to pass information from parent components to child components</li>
+							<li class="fragment" data-fragment-index="4">are passed to a component as attributes in JSX</li>
+						</ul>
+          </section>
+          <section>
+            <ul>State
+							<li class="fragment" data-fragment-index="1">internal data of the component that can change during the component's lifecycle</li>
+							<li class="fragment" data-fragment-index="2">changing the state triggers a re-render of the component, allowing the user interface to be updated when the data changes</li>
+						</ul>
+          </section>
+        </section>
+        <section>
+          <section>Component Lifecycle</section>
+          <section>
+            The Component Lifecycle in React refers to the series of events that occur during the lifespan of a component. Such as initialization, update and remove.
+          </section>
+          <section>
+            <ul>Some of the most commonly used lifecycle methods include:
+							<li class="fragment" data-fragment-index="1">componentDidMount()</li>
+							<li class="fragment" data-fragment-index="2">componentDidUpdate()</li>
+							<li class="fragment" data-fragment-index="3">componentWillUnmount()</li>
+						</ul>
+          </section>
+					<section>Understanding when lifecycle methods are called and how to use them allows for effectively managing the behavior of components in various situations.</section>
+        </section>
+        <section>
+          <section>How to use the components effectively?</section>
+          <section>
+            Build flexible component. Reuse it!
+          </section>
+          <section>
+            Separate components by functionality or by individual parts of the user interface.
+          </section>
+          <section>
+            Avoid state changes directly.
+          </section>
+        </section>
+				<section>
+					<h3>What have we learned?</h3>
+					<p class="fragment" data-fragment-index="1">What is component</p>
+					<p class="fragment" data-fragment-index="2">Class and fn components</p>
+					<p class="fragment" data-fragment-index="3">What is props and state</p>
+					<p class="fragment" data-fragment-index="4">What is lifecycle of component</p>
+					<p class="fragment" data-fragment-index="5">???</p>
+					<p class="fragment" data-fragment-index="5">...</p>
+					<p class="fragment" data-fragment-index="6">PROFIT!!!</p>
+				</section>
+				<section>
+					<p>Anton Dmitriev</p>
+					<a href="https://github.com/lipan4836">Github</a>
+					<p>Student of <a href="https://rs.school/">RS School</a> FrontEnd developer course, 2024</p>
+				</section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
